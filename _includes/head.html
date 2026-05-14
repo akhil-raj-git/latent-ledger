@@ -14,8 +14,6 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-{%- feed_meta -%}
-
 {%- if jekyll.environment == 'production' and site.analytics.provider == 'google-gtag' -%}
   {%- include google-gtag.html -%}
 {%- endif -%}
