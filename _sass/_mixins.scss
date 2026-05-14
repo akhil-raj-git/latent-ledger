@@ -41,32 +41,6 @@
   }
 }
 
-@mixin respond-lg {
-  @media (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin respond-xl {
-  @media (max-width: 1280px) {
-    @content;
-  }
-}
-
-// Dark mode support
-@mixin dark-mode {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-// Animation keyframes
-@mixin keyframes($name) {
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
 // Clearfix
 @mixin clearfix {
   &::after {
