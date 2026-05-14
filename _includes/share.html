@@ -1,0 +1,16 @@
+{% if page.share != false %}
+<div class="share-links">
+  <h4>Share this post</h4>
+  <div class="share-icons">
+    <a href="https://twitter.com/share?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" class="share-twitter" target="_blank" rel="noopener">
+      Twitter
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="share-facebook" target="_blank" rel="noopener">
+      Facebook
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" class="share-linkedin" target="_blank" rel="noopener">
+      LinkedIn
+    </a>
+  </div>
+</div>
+{% endif %}
