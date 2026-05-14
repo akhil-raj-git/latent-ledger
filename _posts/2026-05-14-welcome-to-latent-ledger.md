@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: mediumish-post
 title: "Welcome to Latent Ledger"
 excerpt: "Introducing my research blog and knowledge base focused on AI, ML, and Agentic Engineering."
 date: 2026-05-14
