@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: mediumish-page
 title: "About"
 subtitle: "The person behind the ledger"
 permalink: /about/

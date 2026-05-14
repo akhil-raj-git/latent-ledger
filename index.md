@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: mediumish-home
 title: "Latent Ledger"
 subtitle: "Documenting the space between research and reality"
 ---

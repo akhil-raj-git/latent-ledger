@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: mediumish-page
 title: "Papers"
 subtitle: "AI, ML, and Agentic Engineering research papers"
 permalink: /papers/

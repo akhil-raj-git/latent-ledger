@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: mediumish-page
 title: "Code Projects"
 subtitle: "Implementations, experiments, and tools"
 permalink: /code/
