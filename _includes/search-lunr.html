@@ -1,0 +1,14 @@
+<!-- Search Form -->
+<li class="nav-item">
+  <a class="nav-link" href="#" onclick="toggleSearch(); return false;"><i class="fas fa-search"></i> Search</a>
+</li>
+
+<script>
+function toggleSearch() {
+  var searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.style.display = searchInput.style.display === 'block' ? 'none' : 'block';
+    searchInput.focus();
+  }
+}
+</script>
