@@ -1,6 +1,6 @@
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-{%- if jekyll.environment == 'production' and site.analytics.provider == 'google-gtag' -%}
+{%- if jekyll.environment == 'production' -%}
   {%- include google-gtag.html -%}
 {%- endif -%}
 
