@@ -61,14 +61,12 @@ defaults:
     values:
       layout: "single"
 
-# Plugin settings
+# Plugin settings (GitHub Pages supported plugins only)
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-archives
   - jekyll-include-cache
-  - jekyll-feed
 
 # Category/Tag settings
 categories_page: /categories/
