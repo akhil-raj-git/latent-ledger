@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="page__hero">
+  <h1 class="page__title">{{ page.title | default: site.title }}</h1>
+  {% if page.subtitle %}
+  <p class="page__subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+</div>
+
+<article class="page-content" itemscope itemtype="https://schema.org/CreativeWork">
+  {% if page.image %}
+  <div class="page__image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="page__meta">
+    {% if page.date %}
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: "%B %d, %Y" }}
+    </time>
+    {% endif %}
+    
+    {% if page.author %}
+    <span class="page__author">by {{ page.author }}</span>
+    {% endif %}
+    
+    {% if page.read_time %}
+    <span class="page__reading-time">
+      ⏱ {{ page.read_time }} min read
+    </span>
+    {% endif %}
+  </div>
+
+  <div class="page__content" itemprop="text">
+    {{ content }}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <div class="page__tags">
+    <span class="page__tags-title">Tags:</span>
+    {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag | downcase }}" class="tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.categories and page.categories.size > 0 %}
+  <div class="page__categories">
+    <span class="page__categories-title">Categories:</span>
+    {% for category in page.categories %}
+    <a href="{{ site.baseurl }}/categories/#{{ category | downcase }}" class="category">{{ category }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.share != false %}
+  {%- include share.html -%}
+  {% endif %}
+
+  {%- include comments.html -%}
+
+  <div class="page__nav">
+    {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}" class="page__nav-prev">
+      <span class="nav-label">Previous</span>
+      <h4 class="nav-title">{{ page.previous.title }}</h4>
+    </a>
+    {% endif %}
+    
+    {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}" class="page__nav-next">
+      <span class="nav-label">Next</span>
+      <h4 class="nav-title">{{ page.next.title }}</h4>
+    </a>
+    {% endif %}
+  </div>
+</article>

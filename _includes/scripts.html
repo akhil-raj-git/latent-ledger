@@ -1,0 +1,13 @@
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+{%- if jekyll.environment == 'production' and site.analytics.provider == 'google-gtag' -%}
+  {%- include google-gtag.html -%}
+{%- endif -%}
+
+{%- if page.share != false and site.share -%}
+  {%- include share.html -%}
+{%- endif -%}
+
+{%- if page.comments -%}
+  {%- include comments.html -%}
+{%- endif -%}

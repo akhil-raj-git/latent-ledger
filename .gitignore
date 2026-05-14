@@ -1,0 +1,42 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Builds
+*.gem
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+vendor/bundle/
+
+# Config files (optional - uncomment if you don't want to commit these)
+# _config_dev.yml
+
+# Drafts
+_drafts/
+
+# Includes (if using external theme)
+# _includes/
+# _layouts/
+# _sass/
+
+# Assets (usually you don't ignore these)
+# assets/
+
+# Cache
+.cache/
+*.cache

@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="site-footer__container">
+    <div class="site-footer__content">
+      <div class="site-footer__info">
+        <h4 class="site-footer__title">{{ site.title | default: 'Latent Ledger' }}</h4>
+        <p class="site-footer__description">{{ site.description | default: 'Documenting the space between research and reality' }}</p>
+      </div>
+      
+      <div class="site-footer__links">
+        <div class="site-footer__section">
+          <h5 class="site-footer__section-title">Content</h5>
+          <ul class="site-footer__list">
+            <li><a href="{{ site.baseurl | default: '/' }}/papers/" class="site-footer__link">Papers</a></li>
+            <li><a href="{{ site.baseurl | default: '/' }}/code/" class="site-footer__link">Code</a></li>
+            <li><a href="{{ site.baseurl | default: '/' }}/about/" class="site-footer__link">About</a></li>
+          </ul>
+        </div>
+        
+        <div class="site-footer__section">
+          <h5 class="site-footer__section-title">Connect</h5>
+          <ul class="site-footer__list">
+            {%- if site.twitter_username -%}
+            <li><a href="https://twitter.com/{{ site.twitter_username }}" class="site-footer__link" target="_blank" rel="noopener">Twitter</a></li>
+            {%- endif -%}
+            {%- if site.github_username -%}
+            <li><a href="https://github.com/{{ site.github_username }}" class="site-footer__link" target="_blank" rel="noopener">GitHub</a></li>
+            {%- endif -%}
+            {%- if site.linkedin_username -%}
+            <li><a href="https://linkedin.com/{{ site.linkedin_username }}" class="site-footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+            {%- endif -%}
+          </ul>
+        </div>
+        
+        <div class="site-footer__section">
+          <h5 class="site-footer__section-title">License</h5>
+          <p class="site-footer__license">
+            Content licensed under 
+            <a href="{{ site.license.url | default: 'https://creativecommons.org/licenses/by/4.0/' }}" class="site-footer__link" target="_blank" rel="noopener">
+              {{ site.license.name | default: 'CC BY 4.0' }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; {{ 'now' | date: '%Y' }} {{ site.author | default: site.title | default: 'Latent Ledger' }}. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

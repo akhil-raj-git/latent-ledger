@@ -1,0 +1,149 @@
+# Site configuration for Jekyll
+# See https://jekyllrb.com/docs/configuration/ for more settings
+
+title: "Latent Ledger" 
+description: "Documenting the space between research and reality — AI, ML, and Agentic Engineering insights"
+author: "Akhil Raj"
+email: ""
+twitter_username: ""
+github_username: "akhil-raj-git"
+linkedin_username: ""
+theme: "minimal-mistakes-jekyll"
+
+# URL settings (adjust for production)
+url: "https://akhil-raj-git.github.io/latent-ledger"
+baseurl: "" # empty for root domain, "/reponame" for project pages
+
+# Logo/Avatar
+logo: "/assets/images/logo.png"
+site_logo: "/assets/images/site-logo.png"
+profile_image: "/assets/images/profile.jpg"
+
+# Site settings for engagement tracking
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "" # Add your Google Analytics ID here
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Papers"
+    url: "/papers/"
+  - title: "Code"
+    url: "/code/"
+  - title: "About"
+    url: "/about/"
+
+# Collections for organizing content
+collections:
+  papers:
+    output: true
+    permalink: /papers/:path/
+  code:
+    output: true
+    permalink: /code/:path/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "single"
+      sidebar:
+        category: "papers"
+  - scope:
+      path: ""
+      type: "code"
+    values:
+      layout: "single"
+      sidebar:
+        category: "code"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      sidebar:
+        category: "posts"
+
+# Plugin settings
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-include-cache
+
+# Category/Tag settings
+categories_page: /categories/
+tags_page: /tags/
+
+# Archive settings
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
+
+# Social sharing
+share:
+  enabled: true
+  options:
+    twitter: true
+    facebook: true
+    linkedin: true
+    reddit: true
+    email: true
+
+# License
+license:
+  name: "CC BY 4.0"
+  url: "https://creativecommons.org/licenses/by/4.0/"
+
+# Custom fields for research papers
+paper_defaults:
+  excerpt: ""
+  teaser: ""
+  classes: "wide"
+  read_time: true
+  date: "" # Will be set per paper
+  tags: []
+  categories: []
+  
+# Engagement metrics (displayed but need backend for actual tracking)
+engagement:
+  likes:
+    enabled: true
+    provider: "static" # Static counts, integrate with a backend for real-time
+  downloads:
+    enabled: true
+    provider: "static"
+  forks:
+    enabled: true
+    provider: "github" # Pulls from GitHub API
+
+# SEO / Social media optimization
+social:
+  name: "Akhil Raj"
+  links:
+    - https://twitter.com/
+    - https://github.com/akhil-raj-git
+    - https://linkedin.com/
+    - https://scholar.google.com/
+    - https://orcid.org/

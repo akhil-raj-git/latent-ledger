@@ -1,0 +1,88 @@
+---
+# Welcome to Latent Ledger
+# This is a Jekyll configuration file
+# For more information: https://jekyllrb.com/docs/configuration/
+
+# Site settings
+title: "Latent Ledger"
+description: "Documenting the space between research and reality — AI, ML, and Agentic Engineering insights"
+baseurl: "" # empty for root domain, "/reponame" for project pages
+url: "https://akhil-raj-git.github.io/latent-ledger"
+
+# Author settings
+author:
+  name: "Akhil Raj"
+  email: ""
+  github: "akhil-raj-git"
+  linkedin: ""
+
+# Theme
+theme: minimal-mistakes-jekyll
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Collections
+collections:
+  papers:
+    output: true
+    permalink: /papers/:path/
+  code:
+    output: true
+    permalink: /code/:path/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-include-cache
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Papers"
+    url: "/papers/"
+  - title: "Code"
+    url: "/code/"
+  - title: "About"
+    url: "/about/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "single"
+      category: "papers"
+  - scope:
+      path: ""
+      type: "code"
+    values:
+      layout: "single"
+      category: "code"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      category: "posts"
+
+# Social sharing
+share:
+  enabled: true
+
+# License
+license:
+  name: "CC BY 4.0"
+  url: "https://creativecommons.org/licenses/by/4.0/"

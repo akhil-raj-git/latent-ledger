@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="home__hero">
+  <h1 class="home__title">{{ page.title }}</h1>
+  {% if page.subtitle %}
+  <p class="home__subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+</div>
+
+<div class="home-content">
+  {{ content }}
+</div>
