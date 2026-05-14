@@ -61,6 +61,11 @@ defaults:
     values:
       layout: "single"
 
+# Theme settings
+# Theme: mediumish-jekyll
+# Note: mediumish-jekyll is not available as a gem, so we use the theme files
+# directly copied into _layouts and _includes directories
+
 # Plugin settings (GitHub Pages supported plugins only)
 plugins:
   - jekyll-paginate
