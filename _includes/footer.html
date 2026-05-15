@@ -1,7 +1,12 @@
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-brand">
-      <a href="{{ site.baseurl | default: '/' }}/" class="footer-logo">
+      <a href="{{ site.baseurl | default: '/' }}/" class="footer-logo" aria-label="{{ site.title | default: 'Home' }} — home">
+        {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="" class="footer-logo-img" width="36" height="36" decoding="async">
+        {% else %}
+        {% include logo-mark.html %}
+        {% endif %}
         <span class="footer-logo-text">{{ site.title | default: 'Latent Ledger' }}</span>
       </a>
       <p class="footer-description">{{ site.description | default: 'Documenting the space between research and reality' }}</p>
@@ -40,9 +45,6 @@
   <div class="footer-bottom">
     <p class="footer-copyright">
       &copy; {{ 'now' | date: "%Y" }} {{ site.author | default: site.title }}. All rights reserved.
-    </p>
-    <p class="footer-powered">
-      Powered by <a href="https://jekyllrb.com" class="footer-powered-link" target="_blank" rel="noopener">Jekyll</a>
     </p>
   </div>
 </footer>
