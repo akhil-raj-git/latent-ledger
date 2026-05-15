@@ -68,6 +68,6 @@ subtitle: "Repositories, tools, and experiments"
   {% endif %}
   
   <div class="view-all mt-8 text-center">
-    <a href="/code/" class="btn btn--outline">View All Projects</a>
+    <a href="{{ '/code/' | relative_url }}" class="btn btn--outline">View All Projects</a>
   </div>
 </div>

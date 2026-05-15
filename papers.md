@@ -33,7 +33,7 @@ subtitle: "In-depth analysis of research papers and breakthroughs"
         {% if paper.categories %}
         <div class="card-categories">
           {% for category in paper.categories %}
-          <a href="{{ site.baseurl }}/categories/#{{ category | downcase }}" class="tag">
+          <a href="{{ '/categories/' | relative_url }}#{{ category | downcase }}" class="tag">
             {{ category }}
           </a>
           {% endfor %}
@@ -65,6 +65,6 @@ subtitle: "In-depth analysis of research papers and breakthroughs"
   {% endif %}
   
   <div class="view-all mt-8 text-center">
-    <a href="/papers/" class="btn btn--outline">View All Papers</a>
+    <a href="{{ '/papers/' | relative_url }}" class="btn btn--outline">View All Papers</a>
   </div>
 </div>

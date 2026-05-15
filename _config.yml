@@ -9,9 +9,12 @@ twitter_username: ""
 github_username: "akhil-raj-git"
 linkedin_username: ""
 
-# URL settings (adjust for production)
-url: "https://akhil-raj-git.github.io/latent-ledger"
-baseurl: "" # empty for root domain, "/reponame" for project pages
+# URL settings (GitHub Pages project site lives under /latent-ledger/)
+url: "https://akhil-raj-git.github.io"
+baseurl: "/latent-ledger"
+
+# Post URLs (do not define `posts` under collections — that breaks the built-in posts collection)
+permalink: /blog/:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
@@ -24,6 +27,8 @@ incremental: false
 nav:
   - title: "Home"
     url: "/"
+  - title: "Blog"
+    url: "/blog/"
   - title: "Papers"
     url: "/papers/"
   - title: "Code"
@@ -39,9 +44,6 @@ collections:
   code:
     output: true
     permalink: /code/:path/
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
 
 # Default layouts
 defaults:
@@ -61,10 +63,7 @@ defaults:
     values:
       layout: "single"
 
-# Theme settings
-# Theme: mediumish-jekyll
-# Note: mediumish-jekyll is not available as a gem, so we use the theme files
-# directly copied into _layouts and _includes directories
+# Styles and layouts live in this repo (_layouts, _includes, assets/css).
 
 # Plugin settings (GitHub Pages supported plugins only)
 plugins:
@@ -76,16 +75,6 @@ plugins:
 # Category/Tag settings
 categories_page: /categories/
 tags_page: /tags/
-
-# Archive settings
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks:
-    category: /category/:name/
-    tag: /tag/:name/
 
 # License
 license:

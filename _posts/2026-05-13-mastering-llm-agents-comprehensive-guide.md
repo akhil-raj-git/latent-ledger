@@ -14,7 +14,6 @@ tags:
   - chain of thought
 author_profile: true
 read_time: true
-image: /assets/images/papers/llm-agents/agent-architecture.jpg
 pdf_url: https://arxiv.org/pdf/2404.xxxxx.pdf
 code_url: /code/llm-agents-tutorial/
 authors: "Michael Chen, Sarah Williams, David Park"
@@ -168,8 +167,8 @@ The authors identify several promising directions:
 
 ## Resources
 
-- [Implementation Repository](/code/llm-agents-tutorial/)
-- [Example Notebooks](/code/llm-agents-tutorial/notebooks/)
+- [Implementation Repository]({{ '/code/llm-agents-tutorial/' | relative_url }})
+- [Example Notebooks]({{ '/code/llm-agents-tutorial/notebooks/' | relative_url }})
 - [Evaluation Benchmark](https://github.com/...)
 
 ## Conclusion

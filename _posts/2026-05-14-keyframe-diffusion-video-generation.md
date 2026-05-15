@@ -14,7 +14,6 @@ tags:
   - arxiv:2405.xxxxx
 author_profile: true
 read_time: true
-image: /assets/images/papers/keyframe-diffusion/teaser.jpg
 pdf_url: https://arxiv.org/pdf/2405.xxxxx.pdf
 code_url: /code/keyframe-diffusion/
 authors: "Jane Smith, John Doe, Alice Johnson"
@@ -59,7 +58,7 @@ The paper implements their approach using PyTorch with the following key compone
 
 ## Code Implementation
 
-See the [GitHub repository](/code/keyframe-diffusion/) for the complete implementation including:
+See the [GitHub repository]({{ '/code/keyframe-diffusion/' | relative_url }}) for the complete implementation including:
 
 - Keyframe sampling utilities
 - Temporal attention layers

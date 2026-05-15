@@ -33,7 +33,7 @@ layout: default
     <div class="post-tags mt-6 pt-6 border-top">
       <span class="me-2 text-muted">Tags:</span>
       {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tags/#{{ tag | downcase }}" class="tag tag--primary">{{ tag }}</a>
+      <a href="{{ '/tags/' | relative_url }}#{{ tag | downcase }}" class="tag tag--primary">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}

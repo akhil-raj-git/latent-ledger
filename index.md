@@ -1,5 +1,5 @@
 ---
-layout: mediumish-home
+layout: home
 title: "Latent Ledger"
 subtitle: "Documenting the space between research and reality"
 ---
@@ -21,7 +21,7 @@ subtitle: "Documenting the space between research and reality"
 {% assign papers = site.papers | sort: 'date' | reverse %}
 {% assign code = site.code | sort: 'date' | reverse %}
 
-<div class="home__latest">
+<div class="home__latest" id="latest-papers">
   <h2>Latest Research Papers</h2>
   <div class="papers-grid">
     {% for paper in papers limit: 6 %}
@@ -56,10 +56,10 @@ subtitle: "Documenting the space between research and reality"
     {% endfor %}
   </div>
   
-  <p class="view-all"><a href="/papers/" class="btn btn--outline">View All Papers</a></p>
+  <p class="view-all"><a href="{{ '/papers/' | relative_url }}" class="btn btn--outline">View All Papers</a></p>
 </div>
 
-<div class="home__latest">
+<div class="home__latest" id="latest-code">
   <h2>Latest Code Projects</h2>
   <div class="code-grid">
     {% for project in code limit: 4 %}
@@ -88,13 +88,13 @@ subtitle: "Documenting the space between research and reality"
     {% endfor %}
   </div>
   
-  <p class="view-all"><a href="/code/" class="btn btn--outline">View All Code</a></p>
+  <p class="view-all"><a href="{{ '/code/' | relative_url }}" class="btn btn--outline">View All Code</a></p>
 </div>
 
 <div class="home__about">
   <h2>About This Ledger</h2>
   <p>Latent Ledger is my digital notebook — a place to document my journey through the rapidly evolving landscape of AI research. Each paper analysis, code implementation, and insight represents a commit to understanding.</p>
   
-  <p><strong>Curated by</strong> <a href="/about/">Akhil Raj</a></p>
+  <p><strong>Curated by</strong> <a href="{{ '/about/' | relative_url }}">Akhil Raj</a></p>
   <p><strong>Tags:</strong> #AI #MachineLearning #AgenticSystems #Research #OpenSource # agentic engineering #llms #multimodal #reinforcementlearning</p>
 </div>

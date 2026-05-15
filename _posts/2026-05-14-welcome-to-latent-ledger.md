@@ -11,7 +11,6 @@ tags:
   - setup
 author_profile: true
 read_time: true
-image: /assets/images/blog/welcome-banner.jpg
 ---
 
 ## What is Latent Ledger?
