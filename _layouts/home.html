@@ -2,13 +2,17 @@
 layout: default
 ---
 
-<div class="home__hero">
-  <h1 class="home__title">{{ page.title }}</h1>
+<div class="hero">
+  <h1 class="hero-title">{{ page.title | default: site.title }}</h1>
   {% if page.subtitle %}
-  <p class="home__subtitle">{{ page.subtitle }}</p>
+  <p class="hero-subtitle">{{ page.subtitle }}</p>
   {% endif %}
+  <div class="hero-buttons">
+    <a href="#latest-papers" class="btn btn--primary">Read Papers</a>
+    <a href="#latest-code" class="btn btn--outline">Explore Code</a>
+  </div>
 </div>
 
-<div class="home-content">
+<div class="container py-8">
   {{ content }}
 </div>

@@ -1,52 +1,56 @@
 <footer class="site-footer">
-  <div class="site-footer__container">
-    <div class="site-footer__content">
-      <div class="site-footer__info">
-        <h4 class="site-footer__title">{{ site.title | default: 'Latent Ledger' }}</h4>
-        <p class="site-footer__description">{{ site.description | default: 'Documenting the space between research and reality' }}</p>
-      </div>
-      
-      <div class="site-footer__links">
-        <div class="site-footer__section">
-          <h5 class="site-footer__section-title">Content</h5>
-          <ul class="site-footer__list">
-            <li><a href="{{ site.baseurl | default: '/' }}/papers/" class="site-footer__link">Papers</a></li>
-            <li><a href="{{ site.baseurl | default: '/' }}/code/" class="site-footer__link">Code</a></li>
-            <li><a href="{{ site.baseurl | default: '/' }}/about/" class="site-footer__link">About</a></li>
-          </ul>
-        </div>
-        
-        <div class="site-footer__section">
-          <h5 class="site-footer__section-title">Connect</h5>
-          <ul class="site-footer__list">
-            {%- if site.twitter_username -%}
-            <li><a href="https://twitter.com/{{ site.twitter_username }}" class="site-footer__link" target="_blank" rel="noopener">Twitter</a></li>
-            {%- endif -%}
-            {%- if site.github_username -%}
-            <li><a href="https://github.com/{{ site.github_username }}" class="site-footer__link" target="_blank" rel="noopener">GitHub</a></li>
-            {%- endif -%}
-            {%- if site.linkedin_username -%}
-            <li><a href="https://linkedin.com/{{ site.linkedin_username }}" class="site-footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
-            {%- endif -%}
-          </ul>
-        </div>
-        
-        <div class="site-footer__section">
-          <h5 class="site-footer__section-title">License</h5>
-          <p class="site-footer__license">
-            Content licensed under 
-            <a href="{{ site.license.url | default: 'https://creativecommons.org/licenses/by/4.0/' }}" class="site-footer__link" target="_blank" rel="noopener">
-              {{ site.license.name | default: 'CC BY 4.0' }}
-            </a>
-          </p>
-        </div>
-      </div>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="{{ site.baseurl | default: '/' }}/" class="footer-logo">
+        <span class="footer-logo-text">{{ site.title | default: 'Latent Ledger' }}</span>
+      </a>
+      <p class="footer-description">{{ site.description | default: 'Documenting the space between research and reality' }}</p>
     </div>
     
-    <div class="site-footer__bottom">
-      <p class="site-footer__copyright">
-        &copy; {{ 'now' | date: '%Y' }} {{ site.author | default: site.title | default: 'Latent Ledger' }}. All rights reserved.
-      </p>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4 class="footer-column-title">Content</h4>
+        <ul class="footer-column-links">
+          <li><a href="{{ site.baseurl | default: '/' }}/papers/" class="footer-link">Papers</a></li>
+          <li><a href="{{ site.baseurl | default: '/' }}/code/" class="footer-link">Code</a></li>
+          <li><a href="{{ site.baseurl | default: '/' }}/blog/" class="footer-link">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4 class="footer-column-title">Connect</h4>
+        <ul class="footer-column-links">
+          {%- if site.twitter_username -%}
+          <li><a href="https://twitter.com/{{ site.twitter_username }}" class="footer-link" target="_blank" rel="noopener">Twitter</a></li>
+          {%- endif -%}
+          {%- if site.linkedin_username -%}
+          <li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="footer-link" target="_blank" rel="noopener">LinkedIn</a></li>
+          {%- endif -%}
+          {%- if site.github_username -%}
+          <li><a href="https://github.com/{{ site.github_username }}" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+          {%- endif -%}
+          {%- if site.email -%}
+          <li><a href="mailto:{{ site.email }}" class="footer-link">Email</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4 class="footer-column-title">Legal</h4>
+        <ul class="footer-column-links">
+          <li><a href="{{ site.baseurl | default: '/' }}/privacy/" class="footer-link">Privacy</a></li>
+          <li><a href="{{ site.baseurl | default: '/' }}/terms/" class="footer-link">Terms</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p class="footer-copyright">
+      &copy; {{ 'now' | date: "%Y" }} {{ site.author | default: site.title }}. All rights reserved.
+    </p>
+    <p class="footer-powered">
+      Powered by <a href="https://jekyllrb.com" class="footer-powered-link" target="_blank" rel="noopener">Jekyll</a>
+    </p>
   </div>
 </footer>

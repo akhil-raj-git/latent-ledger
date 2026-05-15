@@ -4,9 +4,9 @@
     {%- include head.html -%}
   </head>
 
-  <body class="layout--{{ page.layout | default: 'default' }}{% if page.classes | join: '' == 'home' %} layout--home{% endif %}">
+  <body class="layout--{{ page.layout | default: 'default' }}">
+    {%- include nav.html -%}
     {%- include skip-links.html -%}
-    {%- include navigation.html -%}
 
     <main id="main-content" class="main-content">
       {{ content }}

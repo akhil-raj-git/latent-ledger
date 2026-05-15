@@ -1,5 +1,5 @@
 ---
-layout: mediumish-post
+layout: single
 title:  "Mastering LLM Agents: A Comprehensive Guide to Agentic Systems"
 excerpt: "Understanding the core components and best practices for building effective LLM-based agents."
 date: 2026-05-13

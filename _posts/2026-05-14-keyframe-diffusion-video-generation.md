@@ -1,5 +1,5 @@
 ---
-layout: mediumish-post
+layout: single
 title:  "A Keyframe-Based Diffusion Model for Video Generation"
 excerpt: "Deep dive into the keyframe diffusion architecture and its implications for video generation."
 date: 2026-05-14
