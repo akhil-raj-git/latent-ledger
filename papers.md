@@ -46,7 +46,7 @@ subtitle: "In-depth analysis of research papers and breakthroughs"
         <a href="{{ paper.pdf_url }}" class="btn btn--outline btn-sm">Read PDF</a>
         {% endif %}
         {% if paper.code_url %}
-        <a href="{{ paper.code_url }}" class="btn btn--secondary btn-sm">Code</a>
+        <a href="{% if paper.code_url contains '://' %}{{ paper.code_url }}{% else %}{{ paper.code_url | relative_url }}{% endif %}" class="btn btn--secondary btn-sm">Code</a>
         {% endif %}
         <a href="{{ paper.url | relative_url }}" class="btn btn--primary btn-sm">Read More</a>
       </div>

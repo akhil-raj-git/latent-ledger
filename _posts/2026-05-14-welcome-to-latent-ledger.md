@@ -10,7 +10,6 @@ tags:
   - about
   - setup
 author_profile: true
-read_time: true
 ---
 
 ## What is Latent Ledger?

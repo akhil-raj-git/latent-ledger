@@ -2,17 +2,24 @@
 layout: default
 ---
 
-<div class="hero">
-  <h1 class="hero-title">{{ page.title | default: site.title }}</h1>
-  {% if page.subtitle %}
-  <p class="hero-subtitle">{{ page.subtitle }}</p>
-  {% endif %}
-  <div class="hero-buttons">
-    <a href="#latest-papers" class="btn btn--primary">Read Papers</a>
-    <a href="#latest-code" class="btn btn--outline">Explore Code</a>
+<section class="hero" aria-labelledby="hero-site-title">
+  <div class="hero__backdrop" aria-hidden="true"></div>
+  <div class="hero__inner container">
+    {% if page.hero_label %}
+    <p class="hero__label">{{ page.hero_label }}</p>
+    {% endif %}
+    <h1 id="hero-site-title" class="hero-title">{{ page.title | default: site.title }}</h1>
+    {% if page.subtitle %}
+    <p class="hero-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="hero-buttons">
+      <a href="#latest-papers" class="btn btn--primary">Papers</a>
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn--ghost">Blog</a>
+      <a href="#latest-code" class="btn btn--outline">Code</a>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="container py-8">
+<div class="container py-8 home-content">
   {{ content }}
 </div>

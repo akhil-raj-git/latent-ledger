@@ -13,7 +13,6 @@ tags:
   - multimodal
   - arxiv:2405.xxxxx
 author_profile: true
-read_time: true
 pdf_url: https://arxiv.org/pdf/2405.xxxxx.pdf
 code_url: /code/keyframe-diffusion/
 authors: "Jane Smith, John Doe, Alice Johnson"

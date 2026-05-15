@@ -13,7 +13,6 @@ tags:
   - tool use
   - chain of thought
 author_profile: true
-read_time: true
 pdf_url: https://arxiv.org/pdf/2404.xxxxx.pdf
 code_url: /code/llm-agents-tutorial/
 authors: "Michael Chen, Sarah Williams, David Park"
