@@ -23,10 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Back to top button
+  // Back to top button (SVG uses currentColor for contrast in light & dark)
   const backToTopBtn = document.createElement('button');
+  backToTopBtn.type = 'button';
   backToTopBtn.className = 'back-to-top';
-  backToTopBtn.innerHTML = '↑';
+  backToTopBtn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>';
   backToTopBtn.setAttribute('aria-label', 'Back to top');
   document.body.appendChild(backToTopBtn);
   

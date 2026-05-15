@@ -92,30 +92,46 @@ body {
 .py-8 { padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-2xl); }
 
 .skip-links {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1001;
+  position: relative;
+  z-index: 10002;
 }
 
+/* Visually hidden until keyboard focus — avoids clipped “white tab” at top of viewport */
 .skip-link {
   position: absolute;
-  left: var(--spacing-md);
-  top: var(--spacing-md);
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-primary);
-  color: #fff;
+  left: -9999px;
+  top: 0;
+  z-index: 10002;
+  padding: 0.5rem 1rem;
+  margin: 0;
   font-size: var(--font-size-sm);
   font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
   border-radius: var(--radius-sm);
-  transform: translateY(-120%);
-  transition: transform var(--transition-fast);
+  background: var(--color-accent);
+  color: #fff;
+  border: 1px solid transparent;
+  transition: none;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 1rem;
+  top: calc(var(--header-height) + 0.35rem);
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skip-links .skip-link:nth-child(2):focus,
+.skip-links .skip-link:nth-child(2):focus-visible {
+  top: calc(var(--header-height) + 2.85rem);
 }
 
 .text-muted {
@@ -1618,14 +1634,15 @@ li {
   transition: width var(--transition-normal);
 }
 
-/* Back to top */
+/* Back to top — icon uses currentColor; surface + border keeps contrast in light & dark */
 .back-to-top {
   position: fixed;
   bottom: var(--spacing-lg);
   right: var(--spacing-lg);
-  padding: var(--spacing-sm);
-  background-color: var(--color-primary);
-  color: #fff;
+  padding: 0;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border-strong);
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -1635,10 +1652,14 @@ li {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: all var(--transition-normal);
+  transform: translateY(12px);
+  transition: opacity var(--transition-normal), visibility var(--transition-normal), transform var(--transition-normal), background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: var(--shadow-md);
   z-index: 999;
+}
+
+.back-to-top svg {
+  display: block;
 }
 
 .back-to-top.visible {
@@ -1648,8 +1669,16 @@ li {
 }
 
 .back-to-top:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-2px);
+  background-color: var(--color-bg-alt);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* Responsive utilities */
